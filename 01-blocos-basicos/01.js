@@ -40,6 +40,25 @@ function isValidCreditCard(card) {
   return cardNumberMod === 0;
 }
 
+// ou...
+// function isValidCreditCard(card) {
+//     let clean_card = card.replace(/\D/g, "").split("")
+//     let aux = false
+//     let sum = 0
+//     for (let i = clean_card.length - 1; i >= 0; i--) {
+//         let result = clean_card[i]
+//         if (aux) {
+//             result = (clean_card[i] * 2).toString()
+//             if (result.length === 2) {
+//                 result = parseInt(result[0]) + parseInt(result[1])
+//             }
+//         }
+//         sum += parseInt(result)
+//         aux = !aux
+//     }
+//     return sum > 0 && sum % 10 === 0
+// }
+
 const valid_credit_cards = [
   "799 273 987 13",
   "378734493671000",
